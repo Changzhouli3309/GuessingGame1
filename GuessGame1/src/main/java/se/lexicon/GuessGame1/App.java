@@ -1,10 +1,6 @@
 package se.lexicon.GuessGame1;
 
-import java.util.Random;
-
 public class App {
-
-	private static Random ran = new Random();
 
 	public static void main(String[] args) {
 
@@ -28,7 +24,7 @@ public class App {
 					}
 				}
 
-				answer = ran.nextInt(max - min) + min;
+				answer = FixInt.randomInt(max,min);
 				System.out.println("Gusse the Number: " + min + " to " + max + "(" + maxg + " tries)");
 			}
 			// iteration part
