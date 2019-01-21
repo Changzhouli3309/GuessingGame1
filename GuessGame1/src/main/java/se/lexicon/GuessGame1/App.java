@@ -18,9 +18,9 @@ public class App {
 				while (!vl) {// get a valid limit
 					System.out.println("Setting the limit");
 					System.out.print("Min: ");
-					min = GetVint.g();
+					min = FixInt.getInt();
 					System.out.print("Max: ");
-					max = GetVint.g();
+					max = FixInt.getInt();
 					if (min < max) {
 						vl = true;
 					} else {
@@ -33,7 +33,7 @@ public class App {
 			}
 			// iteration part
 			System.out.print("Your guess: ");
-			guess = GetVint.g();
+			guess = FixInt.getIntFromLimit(max, min);
 			times++;
 
 			// check the answer
